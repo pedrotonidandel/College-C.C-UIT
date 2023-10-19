@@ -11,6 +11,5 @@ public class CriticalSection {
     }
 
     public static void exitCS(int id) {
-        // Aqui você pode implementar qualquer ação de saída da seção crítica, se necessário.
     }
 }
