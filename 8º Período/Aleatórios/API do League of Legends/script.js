@@ -1,4 +1,4 @@
-var API_KEY= "RGAPI-d8082583-ddf6-43ac-bf73-de03f4739825"
+var API_KEY= "API"
 var br_url = "https://br1.api.riotgames.com";
 var nome_invocador = ""
 
