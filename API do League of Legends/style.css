@@ -1,0 +1,68 @@
+/* Reset de margens e preenchimento */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Estilo para o corpo da página */
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+  }
+  
+  /* Estilo para o contêiner principal */
+  .container {
+    max-width: 600px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Estilo para o input de texto e botão */
+  input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  #search_button {
+    display: block;
+    background-color: #007acc;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  #search_button:hover {
+    background-color: #005faa;
+  }
+  
+  /* Estilo para o nome e nível do invocador */
+  #nome_invocador_data {
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 20px;
+  }
+  
+  #nivel_invocador {
+    font-size: 18px;
+    margin-top: 10px;
+  }
+  
+  /* Estilo para a foto de perfil */
+  #foto_perfil_invocador {
+    margin-top: 20px;
+  }
+  
+  #foto_invocador {
+    max-width: 100px;
+    border-radius: 50%;
+  }
+  

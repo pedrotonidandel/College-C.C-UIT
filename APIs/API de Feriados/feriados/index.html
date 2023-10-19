@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Hi Platform | Feriados v1.0</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://kit.fontawesome.com/08b00f90f4.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="logo-container">
+      <img src="imagens/logo.png" alt="Hi Platform" class="logo">
+    </div>
+    <form id="EnviarData">
+      <div>
+        <label for="data">Data:</label>
+        <input type="text" id="data" name="data" placeholder="25/12/2023" required>
+      </div>
+
+      <div>
+        <label for="descricao">Descrição:</label>
+        <input type="text" id="descricao" name="descricao" placeholder="Natal" required>
+      </div>
+
+      <button type="submit">Enviar</button>
+    </form>
+
+    <form id="DeletarDatas">
+      <div>
+        <label for="data-deletar">Feriado a ser deletado:</label>
+        <input type="text" id="data-deletar" name="data-deletar" placeholder="Natal" required>
+      </div>
+
+      <button type="submit">Deletar</button>
+    </form>
+    <!-- Popup de confirmação -->
+    <div id="confirmation-popup" class="confirmation-popup">
+      <div class="confirmation-content">
+        <h3>Confirmação</h3>
+        <p>Tem certeza que deseja excluir essa data?</p>
+        <div class="confirmation-buttons">
+          <button id="confirm-yes">Sim</button>
+          <button id="confirm-no">Não</button>
+        </div>
+      </div>
+    </div>
+    <button id="atualizarTabela"><i id="iconRefresh" class="fas fa-arrows-rotate"></i></button>
+    <div class="table-container">
+        <table id="data-table">
+          <thead>
+            <tr>
+              <th class="fixed-column">Data</th>
+              <th class="fixed-column">Feriado</th>
+            </tr>
+          </thead>
+          <tbody id="data-table-body">
+            <tr id="empty-row">
+              <td colspan="2">Nenhum dado encontrado</td>
+            </tr>
+          </tbody>
+        </table>
+    </div>
+    <div id="messages"></div>
+    <div class="popup-overlay"></div>
+    <script src="script.js"></script>
+    <script src="botao.js"></script>
+    <footer>
+      <div class="footer-content">
+        <p>&copy; 2023 - <strong><a href="https://www.hiplatform.com" class="blue-text">Hi Plaftorm.</a></strong> -
+          Desenvolvido pelo <strong>Time de Integração</strong> - Feito por: <a
+            href="https://www.linkedin.com/in/pedro-campos-024635216/" class="blue-text"><strong>Pedro
+              Campos</strong></a></p>
+      </div>
+    </footer>
+</body>
+
+</html>

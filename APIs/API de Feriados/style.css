@@ -1,0 +1,101 @@
+/* Paleta de cores */
+:root {
+    --primary-color: #00AEEF;
+    --secondary-color: #4bc5f1;
+    --success-color: #28a745;
+    --error-color: #dc3545;
+    --warning-color: #ffc107;
+    --background-color: #f2f2f2; 
+    --table-background-color: #e6e6e6;
+  }
+  
+  /* Estilos gerais */
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: var(--background-color);
+  }
+  
+  /* Remove a imagem de fundo em dispositivos com largura menor ou igual a 600px */
+  @media screen and (max-width: 600px) {
+    body {
+      background-image: none;
+    }
+  }
+  
+  .center-logo {
+    text-align: center;
+    margin-top: 50px;
+  }
+
+
+  .center-logo .subtext {
+    text-decoration: none;
+    margin-top: 10px;
+    opacity: 0.6;
+    font-size: 18px;
+    color: var(--primary-color);
+  }
+  
+  .center-logo .subtext:hover {
+    color: var(--secondary-color);;
+  }
+
+  .center-logo img {
+    width: 200px; /* Ajuste o tamanho da imagem conforme necessário */
+  }
+  
+  .center-logo h1 {
+    margin-top: 20px;
+    font-size: 24px;
+  }
+  
+  .center-logo .subtext {
+    margin-top: 10px;
+    opacity: 0.6;
+    font-size: 18px;
+  }
+  
+  .center-logo .subtext:hover {
+    opacity: 1;
+  }
+  
+
+  /* Estilos para o rodapé */
+  footer {
+    position: fixed;
+    left: 0;
+    margin-top: 900px;
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    color: #888;
+    background-color: transparent;
+  }
+  
+  .footer-content {
+    display: inline-block;
+  }
+  
+  .footer-content p {
+    margin: 0;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  /* Responsividade para o rodapé em dispositivos móveis */
+  @media screen and (max-width: 600px) {
+    footer {
+      position: fixed; /* Fixar o rodapé na parte inferior da tela em dispositivos móveis */
+      text-align: center;
+    }
+  }
+  
+  .blue-text {
+    color: var(--primary-color); /* Substitua pelo código de cor azul desejado */
+  }
