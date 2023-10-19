@@ -1,5 +1,6 @@
 import java.util.List;
 import java.util.ArrayList;
+import java.util.Random;
 
 public class Process {
     private int id;
@@ -7,6 +8,7 @@ public class Process {
     private int osn;
     private int hsn;
     private List<Integer> queue;
+    private static int globalOsn = 0; //
 
     public Process(int id) {
         this.id = id;
@@ -18,13 +20,19 @@ public class Process {
 
     public void requestCS() {
         estado = 2; // Aguardando
-        osn = hsn + 1;
+        osn = globalOsn;
+
+        // Mostrar o OSN antes de enviar a requisição
+        System.out.println("Processo " + id + " OSN=" + osn + " está enviando requisição para todos os outros processos.");
+
         RequestFunctions.sendMessageToAll(id, osn);
         RequestFunctions.waitForReplies();
         estado = 1; // Ocupando a seção crítica
         CriticalSection.enterCS(id);
         estado = 0; // Livre
         RequestFunctions.sendReplies(queue);
+
+        globalOsn = osn + 1;
     }
 
     public void receiveRequest(int senderId, int senderOsn) {
@@ -43,6 +51,10 @@ public class Process {
     }
 
     public void exitCS() {
+        // Mostrar o OSN quando o processo sai da seção crítica
+        System.out.println("Processo " + id + " OSN=" + osn + " saiu da seção crítica.");
+        globalOsn++;
+
         estado = 0; // Livre
         CriticalSection.exitCS(id);
     }

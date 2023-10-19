@@ -11,5 +11,9 @@ public class RicartAgrawala {
         }
 
         processes.get(3).requestCS();
+        processes.get(4).requestCS();
+        processes.get(3).requestCS();
+        processes.get(4).requestCS();
+        processes.get(1).requestCS();
     }
 }
