@@ -1,0 +1,121 @@
+/* Reset de margens e preenchimento */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.code {
+    word-wrap: break-word;
+    max-width: 100%;
+    margin-bottom: 10px; /* Adiciona espaço na parte inferior da caixa .code */
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0;
+    display: flex; /* Adicione esta linha para usar Flexbox */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    min-height: 100vh; /* Garante que o chat ocupe a altura total da tela */
+    margin: 0; /* Remova a margem padrão do body */
+}
+
+#chat-container {
+    max-width: 400px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #fff;
+}
+
+#chat-messages {
+    max-height: 400px; /* Altura máxima da área de mensagens */
+    overflow-y: auto; /* Rolagem vertical */
+}
+
+.bot-message {
+    background-color: #dcf8c6;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+    max-width: 70%;
+}
+
+.user-message {
+    background-color: #25d366;
+    color: #fff;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+    max-width: 70%;
+}
+
+input, button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background-color: #fff;
+}
+
+input::placeholder {
+    color: #777;
+}
+
+button {
+    background-color: #25d366;
+    color: #fff;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #35c068;
+}
+
+#copy-button {
+    background-color: transparent;
+    color: #25d366;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+#copy-button:hover {
+    background-color: #f5f5f5;
+}
+
+#image-input {
+    background-color: transparent;
+    border: none;
+}
+
+#image-input::-webkit-file-upload-button {
+    background-color: #25d366;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#image-input::-webkit-file-upload-button:hover {
+    background-color: #35c068;
+}
+
+#graphics-button {
+    position: fixed;
+    top: 10px; /* Distância a partir do topo */
+    right: 10px; /* Distância a partir da direita */
+    z-index: 999; /* Garante que o botão esteja acima de outros elementos */
+    background-color: #25d366;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#graphics-button:hover {
+    background-color: #35c068;
+}
+

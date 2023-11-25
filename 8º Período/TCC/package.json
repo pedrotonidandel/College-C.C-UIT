@@ -1,0 +1,33 @@
+{
+  "name": "rest-api",
+  "version": "1.0.0",
+  "description": "Teste de REST API",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "keywords": [
+    "node",
+    "tutorial"
+  ],
+  "author": "Pedro",
+  "license": "ISC",
+  "dependencies": {
+    "@tensorflow/tfjs": "^4.10.0",
+    "body-parser": "^1.20.2",
+    "campeonato-brasileiro-api": "^1.2.10",
+    "express": "^4.18.2",
+    "fs": "^0.0.1-security",
+    "image-to-base64": "^2.2.0",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.5-lts.1",
+    "mysql": "^2.18.1",
+    "nodemon": "^2.0.22",
+    "pdf-poppler": "^0.2.1",
+    "pdf2image": "^1.2.3",
+    "pdf2pic": "^3.0.3",
+    "sharp": "^0.32.4",
+    "tesseract.js": "^4.1.1"
+  }
+}
